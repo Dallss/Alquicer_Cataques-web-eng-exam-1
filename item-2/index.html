@@ -21,53 +21,73 @@
                 width: 50px; /* should be auto*/
             }
             header {
-                grid-row: 1 /2;
-                grid-column: 1/5;
-                z-index: 20;
+                grid-row: 1 /3;
+                grid-column: 1/6;
+                z-index: 18;
                 background-color: rgb(215, 242, 255);
                 border: 1px solid black;
             }
-            
+            .greetings {
+                grid-row: 2;
+                width: max-content;
+                padding: 5px;
+                grid-column: 4/5;
+                z-index: 40;
+                background-color: rgb(212, 212, 212);
+                border: 1px solid black; /* Sets all borders to 5px black */
+                border-width: 1px 1px 0px 1px; /* Top border is 0px */
+                font-size: small;
+            }
             .grid-container {
                 height: 100vh;
                 display: grid;
-                grid-template-columns: 200px 600px 1fr;
-                grid-template-rows: 50px 20px 20px auto;
+                grid-template-columns: 200px 3fr 1fr 2fr;
+                grid-template-rows: 30px 30px 20px 20px auto;
             }
    
 
             /* nav */
             nav {
-                z-index: 12;
-                display: grid;
-                grid-template-columns: 200px 1fr 1fr;
+                z-index: 20;
+                display: flex;
+                justify-content: flex-end;
                 align-items: center;
-                padding: 10px;
+                gap: 10px;
                 background: #f1f1f1;
                 background-color: rgb(212, 212, 212);
-                grid-column: 1 / 5;
-                grid-row: 2 / 4;
+                grid-column: 1 / 6;
+                grid-row: 3 / 5;
                 border-bottom: 1px solid black;
+                padding-right: 100px;
             }
+
+            .search-bar {
+                padding: 1px;
+                border: 1px solid black;
+                
+            }
+
+            button {
+                padding: 1px 1px;
+                border: 1px solid #ddd;
+                cursor: pointer;
+                font-size: 12px;
+            }
+
+            button:hover {
+                background-color: #e0e0e0;
+            }
+
             .nav-item {
-                margin-right: 50px;
-                grid-column: -1;
-                width: 300px;
+                grid-column: 4 / 5;
                 grid-row: 2 / 3;
+                width: 300px;
+                height: 50px;
                 z-index: 20;
                 background-color: rgb(226, 183, 183);
+                border: 1px solid black;
                 display: grid;
-                grid-template-columns: 1fr; /* Single column */
-                grid-template-rows: repeat(2, 1fr);
                 font-size: x-small;
-            }
-            .nav-items {
-                background-color: rgb(240, 236, 236);
-                grid-column: 3/4;
-                font-size: x-small;
-                display: flex;
-                flex-direction: column;
-                gap: 8px
             }
 
             .search input {
@@ -75,10 +95,10 @@
             }
             /* sideber */
             .sidebar {
-                background-color: rgb(213, 228, 243);
-                z-index: 15;
+                background-color: rgb(188, 215, 242);
+                z-index: 100;
                 grid-column: 1 / 2;
-                grid-row: 3 / 5;
+                grid-row: 4 / 5;
                 border: 1px solid black;
                 display: flex;
                 flex-direction: column;
@@ -90,6 +110,7 @@
                 font-size: 14px;
                 color: #333;
                 border-bottom: 1px solid #ddd;
+                background-color: rgb(188, 215, 242);
             }
             .side-tab {
                 display: flex;
@@ -99,12 +120,14 @@
                 color: #333;
                 cursor: pointer;
                 border-bottom: 1px solid #ddd;
+                background-color: rgb(188, 215, 242);
             }
 
             .side-tab img {
                 width: 16px;
                 height: 16px;
                 margin-right: 8px;
+                border-bottom: 1px solid black ;
             }
 
             .side-tab:hover {
@@ -134,10 +157,30 @@
             }
 
             /* tabs */
+            .tab-names {
+                grid-row: 4/5;
+                grid-column: 2/3;
+                align-self: end;
+                z-index: 40;
+
+                display: flex;
+            }
+            .tab-name {
+                margin-left: 10px;
+                padding-left: 10px;
+                padding-right: 10px;
+                height: 23px;
+                border: 1px solid black;
+                border-width: 1px 1px 0px 1px;
+                background-color: rgb(238, 238, 238);
+            }
+            a {
+                text-decoration: none;
+            }
             .hot {
                 grid-column: 2 / 3;
-                grid-row: 4 / 4;
-                background-color: rgb(235, 236, 235);
+                grid-row: 5 / 6;
+                background-color: rgb(238, 238, 238);
                 display: flex;
                 flex-direction: column;
                 padding: 0;
@@ -146,18 +189,30 @@
             }
             .tab-content {
                 display: flex;
-                justify-content: space-between;
+                justify-content: left;
                 align-items: center;
                 flex: 15px 20px auto; 
-                height: 80px;
+                height: 70px;
                 overflow: hidden;
                 border-bottom: 1px solid black;
                 font-size: x-small;
                 width: 100%;
+                padding-top: 8px;
+            }
+            .tab-content>*{
+                margin-left: 20px;
+                padding-top: 2px;
+                padding-bottom: 0;
             }
             .cont {
                 display: flex;
+                justify-items: flex-start;
+                height: 100%;
                 margin-right: 20px;
+            }
+            .cont-title {
+                height: 74%;
+                font-size: medium;
             }
             .votes {
                 display: flex;
@@ -172,14 +227,18 @@
                 font-size: 17px;
                 margin-left: 20px;
             }
+            .main-cont {
+                height: 100%;
+            }
             .cont-img {
-                height: 100px;
+                height: 90%;
                 width: 50px;
+                padding: 2px;
             }
 
             .preview {
-                grid-column: 3 / 5;
-                grid-row: 4 / 4;
+                grid-column: 3 / 6;
+                grid-row: 4 / 5;
                 z-index: 10;
                 background-color: rgb(224, 223, 224);
                 border-right: 1px;
@@ -235,24 +294,26 @@
         <header>
             <img src="./title.png" alt="" class="logo"> 
         </header>
-    
-        <nav>
-            
-            
-        </nav>
-        <div class="nav-item">
-            <div class="user-info">
-                <span class="username">7hundredand77</span>, you're back! 
-                <a href="#" class="preferences">preferences</a> | 
-                <a href="#" class="logout">logout?</a> 😞
-            </div>
-            <div class="">
-                <span>📩 1 New Msg</span>
-                <span>🔗 53,211 Link</span>
-                <span>💬 4,887 Comment</span>
-            </div>
+        <div class="greetings">
+            <span>
+                7hundredand77, you're back! preferences | <a href="#">logout?</a> :( 
+            </span>
         </div>
+        <nav>
+            <input type="text" class="search-bar" placeholder="Search">
+            <button class="btn-icon">🔍</button>
+            <button class="btn-message">📩 1 New Msg</button>
+            <button class="btn-link">📎 53,211 Link</button>
+            <button class="btn-comment">💬 4,887 Comment</button>
+        </nav>        
         
+        <div class="tab-names">
+            <div class="tab-name sel-tab"><a href="/whats-hot">Whats Hot</a></div>
+            <div class="tab-name"><a href="/new">New</a></div>
+            <div class="tab-name"><a href="/controversial">Controversial</a></div>
+            <div class="tab-name"><a href="/top">Top</a></div>
+            <div class="tab-name"><a href="/saved">Saved</a></div>
+        </div>
         <div class="sidebar">
             <div class="side-tab sidebar-header"> <span><img src="icon.png" alt="icon">FRONT PAGE</span> <button style="background: none;"><<</button></div>
             <div class="side-tab"><img src="icon.png" alt="icon"> PICS</div>
@@ -295,14 +356,13 @@
                 </div>
                 <div class="cont">
                     <img src="" alt="" class="cont-img">
-                    <div class="text">
-                        <h2>What do you call 60 guys watching the Super Bowl at home?</h2>
-                        <p>Submitted by <strong>krispykrackers</strong></p>
-                        <p>623 comments | share | save | hide | report</p>
-                    </div>
-                    
-                </div>
-                
+                    <div class="main-cont">
+                        <a href="#" class="cont-title">What do you call 60 guys watching the Super Bowl at home?</a>
+
+                        <div>Submitted by <strong>krispykrackers</strong></div>
+                        <div>623 comments | share | save | hide | report</div>
+                    </div>  
+                </div>         
             </div>
             <div id="post1" class="tab-content">
                 <span class="item-no"> 1 </span>
@@ -313,14 +373,13 @@
                 </div>
                 <div class="cont">
                     <img src="" alt="" class="cont-img">
-                    <div class="text">
-                        <h2>What do you call 60 guys watching the Super Bowl at home?</h2>
-                        <p>Submitted by <strong>krispykrackers</strong></p>
-                        <p>623 comments | share | save | hide | report</p>
-                    </div>
-                    
-                </div>
-                
+                    <div class="main-cont">
+                        <a href="#" class="cont-title">What do you call 60 guys watching the Super Bowl at home?</a>
+
+                        <div>Submitted by <strong>krispykrackers</strong></div>
+                        <div>623 comments | share | save | hide | report</div>
+                    </div>  
+                </div>         
             </div>
             <div id="post1" class="tab-content">
                 <span class="item-no"> 1 </span>
@@ -331,14 +390,13 @@
                 </div>
                 <div class="cont">
                     <img src="" alt="" class="cont-img">
-                    <div class="text">
-                        <h2>What do you call 60 guys watching the Super Bowl at home?</h2>
-                        <p>Submitted by <strong>krispykrackers</strong></p>
-                        <p>623 comments | share | save | hide | report</p>
-                    </div>
-                    
-                </div>
-                
+                    <div class="main-cont">
+                        <a href="#" class="cont-title">What do you call 60 guys watching the Super Bowl at home?</a>
+
+                        <div>Submitted by <strong>krispykrackers</strong></div>
+                        <div>623 comments | share | save | hide | report</div>
+                    </div>  
+                </div>         
             </div>
             <div id="post1" class="tab-content">
                 <span class="item-no"> 1 </span>
@@ -349,16 +407,167 @@
                 </div>
                 <div class="cont">
                     <img src="" alt="" class="cont-img">
-                    <div class="text">
-                        <h2>What do you call 60 guys watching the Super Bowl at home?</h2>
-                        <p>Submitted by <strong>krispykrackers</strong></p>
-                        <p>623 comments | share | save | hide | report</p>
-                    </div>
-                    
-                </div>
-                
+                    <div class="main-cont">
+                        <a href="#" class="cont-title">What do you call 60 guys watching the Super Bowl at home?</a>
+
+                        <div>Submitted by <strong>krispykrackers</strong></div>
+                        <div>623 comments | share | save | hide | report</div>
+                    </div>  
+                </div>         
             </div>
-            
+            <div id="post1" class="tab-content">
+                <span class="item-no"> 1 </span>
+                <div class="votes"> 
+                    ^
+                    <span class="vote-no">235</span>
+                    v
+                </div>
+                <div class="cont">
+                    <img src="" alt="" class="cont-img">
+                    <div class="main-cont">
+                        <a href="#" class="cont-title">What do you call 60 guys watching the Super Bowl at home?</a>
+
+                        <div>Submitted by <strong>krispykrackers</strong></div>
+                        <div>623 comments | share | save | hide | report</div>
+                    </div>  
+                </div>         
+            </div>
+            <div id="post1" class="tab-content">
+                <span class="item-no"> 1 </span>
+                <div class="votes"> 
+                    ^
+                    <span class="vote-no">235</span>
+                    v
+                </div>
+                <div class="cont">
+                    <img src="" alt="" class="cont-img">
+                    <div class="main-cont">
+                        <a href="#" class="cont-title">What do you call 60 guys watching the Super Bowl at home?</a>
+
+                        <div>Submitted by <strong>krispykrackers</strong></div>
+                        <div>623 comments | share | save | hide | report</div>
+                    </div>  
+                </div>         
+            </div>
+            <div id="post1" class="tab-content">
+                <span class="item-no"> 1 </span>
+                <div class="votes"> 
+                    ^
+                    <span class="vote-no">235</span>
+                    v
+                </div>
+                <div class="cont">
+                    <img src="" alt="" class="cont-img">
+                    <div class="main-cont">
+                        <a href="#" class="cont-title">What do you call 60 guys watching the Super Bowl at home?</a>
+
+                        <div>Submitted by <strong>krispykrackers</strong></div>
+                        <div>623 comments | share | save | hide | report</div>
+                    </div>  
+                </div>         
+            </div>
+            <div id="post1" class="tab-content">
+                <span class="item-no"> 1 </span>
+                <div class="votes"> 
+                    ^
+                    <span class="vote-no">235</span>
+                    v
+                </div>
+                <div class="cont">
+                    <img src="" alt="" class="cont-img">
+                    <div class="main-cont">
+                        <a href="#" class="cont-title">What do you call 60 guys watching the Super Bowl at home?</a>
+
+                        <div>Submitted by <strong>krispykrackers</strong></div>
+                        <div>623 comments | share | save | hide | report</div>
+                    </div>  
+                </div>         
+            </div>
+            <div id="post1" class="tab-content">
+                <span class="item-no"> 1 </span>
+                <div class="votes"> 
+                    ^
+                    <span class="vote-no">235</span>
+                    v
+                </div>
+                <div class="cont">
+                    <img src="" alt="" class="cont-img">
+                    <div class="main-cont">
+                        <a href="#" class="cont-title">What do you call 60 guys watching the Super Bowl at home?</a>
+
+                        <div>Submitted by <strong>krispykrackers</strong></div>
+                        <div>623 comments | share | save | hide | report</div>
+                    </div>  
+                </div>         
+            </div>
+            <div id="post1" class="tab-content">
+                <span class="item-no"> 1 </span>
+                <div class="votes"> 
+                    ^
+                    <span class="vote-no">235</span>
+                    v
+                </div>
+                <div class="cont">
+                    <img src="" alt="" class="cont-img">
+                    <div class="main-cont">
+                        <a href="#" class="cont-title">What do you call 60 guys watching the Super Bowl at home?</a>
+
+                        <div>Submitted by <strong>krispykrackers</strong></div>
+                        <div>623 comments | share | save | hide | report</div>
+                    </div>  
+                </div>         
+            </div>
+            <div id="post1" class="tab-content">
+                <span class="item-no"> 1 </span>
+                <div class="votes"> 
+                    ^
+                    <span class="vote-no">235</span>
+                    v
+                </div>
+                <div class="cont">
+                    <img src="" alt="" class="cont-img">
+                    <div class="main-cont">
+                        <a href="#" class="cont-title">What do you call 60 guys watching the Super Bowl at home?</a>
+
+                        <div>Submitted by <strong>krispykrackers</strong></div>
+                        <div>623 comments | share | save | hide | report</div>
+                    </div>  
+                </div>         
+            </div>
+            <div id="post1" class="tab-content">
+                <span class="item-no"> 1 </span>
+                <div class="votes"> 
+                    ^
+                    <span class="vote-no">235</span>
+                    v
+                </div>
+                <div class="cont">
+                    <img src="" alt="" class="cont-img">
+                    <div class="main-cont">
+                        <a href="#" class="cont-title">What do you call 60 guys watching the Super Bowl at home?</a>
+
+                        <div>Submitted by <strong>krispykrackers</strong></div>
+                        <div>623 comments | share | save | hide | report</div>
+                    </div>  
+                </div>         
+            </div>
+            <div id="post1" class="tab-content">
+                <span class="item-no"> 1 </span>
+                <div class="votes"> 
+                    ^
+                    <span class="vote-no">235</span>
+                    v
+                </div>
+                <div class="cont">
+                    <img src="" alt="" class="cont-img">
+                    <div class="main-cont">
+                        <a href="#" class="cont-title">What do you call 60 guys watching the Super Bowl at home?</a>
+
+                        <div>Submitted by <strong>krispykrackers</strong></div>
+                        <div>623 comments | share | save | hide | report</div>
+                    </div>  
+                </div>         
+            </div>
         
            
         </div>
