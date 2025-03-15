@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.step {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background: #f9f9f9;
+    margin: 20px;
+}
+
+:target {
+    display: block;
+}
+
+a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background: purple;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+a:focus, a:hover {
+    background: darkorchid;
+}
