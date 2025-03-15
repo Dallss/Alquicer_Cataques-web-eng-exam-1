@@ -7,27 +7,34 @@
 /* Inter for Body Text */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
-header h1 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 55px;
-    margin-bottom: 10px;
-}
-
-header p {
-    font-family: 'Inter', sans-serif;
-    font-size: 20px;
-}
-
+/* BODY */
+/* Style for the Whole Page */
 body {
     font-family: 'Inter', sans-serif;
     text-align: center;
-    margin: 90px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    margin-left: 90px;
+    margin-right: 90px;
 }
 
-main {
-    margin-top: 30px;
+/* HEADER */
+/* Style for the Recipe Title */
+header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 55px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
+/* Style for the Recipe Introduction */
+header p {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+}
+
+/* NAV BAR */
+/* Layout and style for the steps navigation bar */
 nav ul {
     display: flex;
     justify-content: space-evenly;
@@ -35,11 +42,20 @@ nav ul {
     list-style: none;
 }
 
+/* Adds spacing between individual navigation bar items */
 nav ul li {
     margin: 0 10px;
 }
 
-.step {
+/* MAIN */
+/* Space between the main container and the nav bar */
+main {
+    margin-top: 30px;
+}
+
+/* SECTION */
+/* General layout and style for the step card */
+.step-card {
     display: none;
     padding: 5px;
     background: white;
@@ -49,12 +65,26 @@ nav ul li {
     border-radius: 30px;
     box-shadow: 0px 8px 12px rgba(250, 129, 30, 0.233);
     transition: box-shadow 0.3s ease-in-out;
+    outline-color: rgb(250, 129, 30);
 }
 
-.step:hover {
+/* Effect when step-card is being hovered over */
+.step-card:hover {
     box-shadow: 0px 8px 12px rgba(250, 129, 30, 0.463);
 }
 
+/* Ensures that the step-card is displayed when it is targeted via an anchor link */
+.step-card:target {
+    display: block;
+}
+
+/* Hides elements that are marked as aria-hidden for accessibility purposes */
+[aria-hidden="true"] {
+    display: none;
+}
+
+/* STEPS CONTENT */
+/* General layout for the step content inside the step-card */
 .step-content {
     max-width: 400px;
     margin: 0 auto;
@@ -62,42 +92,51 @@ nav ul li {
     padding: 10px;
 }
 
+/* Style specific for the h2 tag of the step content */
 .step-content h2 {
     font-family: 'Playfair Display', serif;
     font-weight: bolder;
     font-size: 30px;
 }
 
+/* Style specific for the p tag of the step content */
 .step-content p {
     font-size: 15px;
 }
 
+/* Style specific for the image of the step content */
 .step-content img {
     width: 90%;
+    border-radius: 10px;
 }
 
-:target {
-    display: block;
-}
-
+/* ANCHOR LINKS */
+/* General layout and style for the step navigation buttons */
 a {
     display: inline-block;
     margin: 10px;
     padding: 10px 20px;
-    background: rgb(250, 129, 30);
+    background-color: rgb(250, 129, 30);
     color: white;
     text-decoration: none;
     border-radius: 5px;
     border: 2px solid transparent;
 }
 
+/* Ensures the step navigation button is styled when it is focused */
+a:focus-within {
+    color: rgb(250, 129, 30);
+    background-color: rgba(255, 255, 255, 0);
+    text-decoration: none;
+    border-radius: 5px;
+    outline: 2px solid transparent;
+    border-color: rgb(250, 129, 30);
+}
+
+/* Changes the appearance of the step navigation button when hovered */
 a:hover {
     color: rgb(250, 129, 30);
     border-style: solid;
     background-color: rgba(255, 255, 255, 0);
     border-color: rgb(250, 129, 30);
-}
-
-section img {
-    width: 100%;
 }
