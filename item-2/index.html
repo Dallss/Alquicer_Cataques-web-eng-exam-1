@@ -52,13 +52,13 @@
                 display: flex;
                 justify-content: flex-end;
                 align-items: center;
-                gap: 10px;
-                background: #f1f1f1;
+                gap: 10px;     
                 background-color: rgb(212, 212, 212);
                 grid-column: 1 / 6;
                 grid-row: 3 / 5;
-                border-bottom: 1px solid black;
+                border-bottom: 1px solid rgb(124, 124, 124);
                 padding-right: 100px;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
             }
 
             .search-bar {
@@ -84,7 +84,6 @@
                 width: 300px;
                 height: 50px;
                 z-index: 20;
-                background-color: rgb(226, 183, 183);
                 border: 1px solid black;
                 display: grid;
                 font-size: x-small;
@@ -95,11 +94,12 @@
             }
             /* sideber */
             .sidebar {
-                background-color: rgb(188, 215, 242);
-                z-index: 100;
+                background-color: rgb(220, 231, 241);
+                z-index: 50;
                 grid-column: 1 / 2;
-                grid-row: 4 / 5;
+                grid-row: 4 / 6;
                 border: 1px solid black;
+                box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
                 display: flex;
                 flex-direction: column;
             }
@@ -109,8 +109,6 @@
                 align-items: center;
                 font-size: 14px;
                 color: #333;
-                border-bottom: 1px solid #ddd;
-                background-color: rgb(188, 215, 242);
             }
             .side-tab {
                 display: flex;
@@ -119,8 +117,6 @@
                 font-size: 14px;
                 color: #333;
                 cursor: pointer;
-                border-bottom: 1px solid #ddd;
-                background-color: rgb(188, 215, 242);
             }
 
             .side-tab img {
@@ -171,8 +167,9 @@
                 padding-right: 10px;
                 height: 23px;
                 border: 1px solid black;
-                border-width: 1px 1px 0px 1px;
-                background-color: rgb(238, 238, 238);
+            }
+            .sel-tab {
+                border-bottom: 1px solid rgb(212, 212, 212);
             }
             a {
                 text-decoration: none;
@@ -262,9 +259,8 @@
                 margin: auto;
                 background: white;
                 padding: 15px;
-                border-radius: 5px;
                 box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-                box-shadow: inset 2 2 2 2px black;
+                box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.4);
             }
 
             .comment {
@@ -306,7 +302,6 @@
             <button class="btn-link">📎 53,211 Link</button>
             <button class="btn-comment">💬 4,887 Comment</button>
         </nav>        
-        
         <div class="tab-names">
             <div class="tab-name sel-tab"><a href="/whats-hot">Whats Hot</a></div>
             <div class="tab-name"><a href="/new">New</a></div>
