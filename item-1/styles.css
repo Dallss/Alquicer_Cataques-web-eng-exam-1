@@ -87,6 +87,13 @@ h1 {
     transition: color 0.2s ease;
 }
 
+/* Ensures the Read More button is styled when it is focused using the tab key */
+.news-content a:focus-within {
+    color: #007BFF;
+    outline-offset: 5px;
+    outline-color: #007BFF;
+}
+
 /* Effect when the Read More is being hovered over */
 .news-content a:hover {
     color: #007BFF;
@@ -119,6 +126,13 @@ h1 {
     font-size: 18px;
     color: black;
     transition: color 0.2s ease;
+}
+
+/* Ensures the list of trending topic is styled when it is focused using the tab key*/
+.sidebar ul li a:focus-within {
+    color: rgba(0, 0, 0, 0.553);
+    outline-offset: 5px;
+    outline-color: rgba(0, 0, 0, 0.553);
 }
 
 /* Effect when the list items of the side bar is being hovered over */
