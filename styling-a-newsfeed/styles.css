@@ -1,0 +1,151 @@
+/* Poppins for Latest News */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/*Playfair Display for News Headers*/
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+/* Inter for Body Text */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/* BODY */
+/* Style for the Whole Page */
+body {
+    background-color: #f5f6ff;
+    padding: 30px;
+    margin-bottom: 40px;
+}
+
+/* HEADER */
+/* Fontstyle for the Latest News */
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 45px;
+}
+
+/* MAIN - NEWS CONTAINER */
+/* Layout for the main news container including the header */
+.news-container, header {
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 80px;
+}
+
+/* SECTION - NEWSFEED */
+/* Layout for the newsfeed section*/
+.newsfeed {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    flex: 2;
+}
+
+/* ARTICLE - NEWS CARD */
+/* Layout and style for news cards */
+.news-card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Effect when news-card is being hovered over */
+.news-card:hover {
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.484);
+}
+
+/* Layout for the image inside the news card */
+.news-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* NEWS CONTENT */
+/* Fontstyle for all the news content except the news title */
+.news-content {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Style for the news title */
+.news-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: bolder;
+    font-size: 30px;
+    margin-bottom: 0px;
+}
+
+/* Style for the Read More part of the news content*/
+.news-content a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #042f5e;
+    transition: color 0.2s ease;
+}
+
+/* Effect when the Read More is being hovered over */
+.news-content a:hover {
+    color: #007BFF;
+}
+
+/* Specific style for date as required */
+.date {
+    font-size: 12px;
+    color: gray;
+}
+
+/* SIDEBAR */
+/* Space that sidebar element can take up */
+.sidebar {
+    flex: 1;
+}
+
+/* Style for the Trending Topics header */
+.sidebar h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    margin: 0;
+}
+
+/* Style for all the elements inside the side bar */
+.sidebar ul li a {
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    transition: color 0.2s ease;
+}
+
+/* Effect when the list items of the side bar is being hovered over */
+.sidebar ul li a:hover {
+    color: rgba(0, 0, 0, 0.553);
+}
+
+/* Padding space for the list items */
+.sidebar li {
+    padding: 4px;
+}
+
+/* RESPONSIVENESS */
+/* Dynamic layout and responsiveness when the screen is less than 600px */
+@media (max-width: 600px){
+    .news-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+    }
+}
