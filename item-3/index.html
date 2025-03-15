@@ -3,50 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accessible Cooking Guide</title>
+    <title>Interactive Cooking Guide</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <header>
-        <h1>Simple Pancakes Recipe</h1>
-        <p>Follow these steps to make delicious pancakes.</p>
+        <h1>Pork Adobo Recipe</h1>
+        <p>
+            Hearty, popular, and oh so flavorful! Follow these steps to experience the wonderful taste of Pork Adobo.
+        </p>
     </header>
-
     <nav>
         <ul>
             <li><a href="#step1">Step 1</a></li>
             <li><a href="#step2">Step 2</a></li>
             <li><a href="#step3">Step 3</a></li>
             <li><a href="#step4">Step 4</a></li>
+            <li><a href="#step5">Step 5</a></li>
+            <li><a href="#step6">Step 6</a></li>
         </ul>
     </nav>
 
     <main>
         <section id="step1" class="step" tabindex="0">
-            <h2>Step 1: Prepare Ingredients</h2>
-            <p>Gather flour, eggs, milk, sugar, and baking powder.</p>
+            <h2>Step 1: Marinating the Meat</h2>
+            <p>
+                Combine the chicken, pork, soy sauce, and half of the garlic in a large bowl. Mix well. Marinate this for at least 1 hour. Note: For best results, marinate this overnight.
+            </p>
             <a href="#step2" class="next">Next</a>
         </section>
 
         <section id="step2" class="step" tabindex="0">
-            <h2>Step 2: Mix Ingredients</h2>
-            <p>Whisk everything together until smooth.</p>
+            <h2>Step 2: Browning the garlic</h2>
+            <p>
+                Heat the cooking oil in a pan and then add the remaining garlic immediately. This will slowly cook and brown the garlic and will prevent it from getting burnt easily. Continue cooking while occasionally stirring until the garlic turns golden brown.  Remove the garlic and set it aside. Also set the pan with garlic oil aside for use later.
+            </p>
             <a href="#step1" class="prev">Previous</a>
             <a href="#step3" class="next">Next</a>
         </section>
 
         <section id="step3" class="step" tabindex="0">
-            <h2>Step 3: Cook the Pancakes</h2>
-            <p>Pour batter onto a hot pan and cook until golden brown.</p>
+            <h2>Step 3: Initial simmering</h2>
+            <p>
+                Transfer the marinated pork and chicken along with all the marinade ingredients in a separate cooking pot. Add vinegar, cracked peppercorns, and dried bay leaves. Cover the cooking pot and let it boil. Adjust the heat to a simmer. Continue simmering for 30 to 35 minutes. Remove the chicken pieces and place it on a plate. Continue simmering the pork for 20 minutes. After that, remove the pork and place it on the same plate with the chicken.
+            </p>
             <a href="#step2" class="prev">Previous</a>
             <a href="#step4" class="next">Next</a>
         </section>
 
         <section id="step4" class="step" tabindex="0">
-            <h2>Step 4: Serve</h2>
-            <p>Enjoy your pancakes with syrup or fruits.</p>
+            <h2>Step 4: Frying the meat</h2>
+            <p>
+                As the pork cools down, heat the garlic oil on the other pan. Fry the chicken pieces for around 3 minutes per side or until it browns. Make sure that the chicken has dried up for a while before frying. This will prevent the oil from splattering. Do the same thing with the pork, afterwards.
+            </p>
             <a href="#step3" class="prev">Previous</a>
+            <a href="#step5" class="next">Next</a>
+        </section>
+
+        <section id="step5" class="step" tabindex="0">
+            <h2>Step 5: Final simmering and finishing the dish</h2>
+            <p>
+                Put the fried pork and chicken back into the cooking pot with the sauce. Bring it back to a boil.  Add the Datu Puti Fish Sauce. Cover the pot. Adjust the heat to a simmer and then continue simmering for 10 to 12 minutes. Note: You can add ½ cup water if you want your adobo to have more sauce. Make sure to adjust the flavor by adding more fish sauce as necessary. Then you may also add around 1 teaspoon of sugar if preferred. Transfer your chicken pork adobo to a serving plate. Afterwards, sprinkle with fried garlic on top.
+            </p>
+            <a href="#step4" class="prev">Previous</a>
+            <a href="#step6" class="next">Next</a>
+        </section>
+
+        <section id="step6" class="step" tabindex="0">
+            <h2>Step 6: Serve</h2>
+            <p>
+                Serve this with warm rice. Share and enjoy!
+            </p>
+            <a href="#step5" class="prev">Previous</a>
             <a href="#step1" class="restart">Restart</a>
         </section>
     </main>
