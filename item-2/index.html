@@ -24,7 +24,7 @@
                 grid-row: 1 /3;
                 grid-column: 1/6;
                 z-index: 18;
-                background-color: rgb(215, 242, 255);
+                background-color: #DAECFE;
                 border: 1px solid black;
             }
             .greetings {
@@ -33,7 +33,7 @@
                 padding: 5px;
                 grid-column: 4/5;
                 z-index: 40;
-                background-color: rgb(212, 212, 212);
+                background-color: #EEEFF1;
                 border: 1px solid black; /* Sets all borders to 5px black */
                 border-width: 1px 1px 0px 1px; /* Top border is 0px */
                 font-size: small;
@@ -53,7 +53,7 @@
                 justify-content: flex-end;
                 align-items: center;
                 gap: 10px;     
-                background-color: rgb(212, 212, 212);
+                background-color: #EEEFF1;
                 grid-column: 1 / 6;
                 grid-row: 3 / 5;
                 border-bottom: 1px solid rgb(124, 124, 124);
@@ -94,11 +94,11 @@
             }
             /* sideber */
             .sidebar {
-                background-color: rgb(220, 231, 241);
+                background-color: #EFF8FF;
                 z-index: 50;
                 grid-column: 1 / 2;
                 grid-row: 4 / 6;
-                border: 1px solid black;
+                border: 1px solid rgb(137, 137, 137);
                 box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
                 display: flex;
                 flex-direction: column;
@@ -177,12 +177,12 @@
             .hot {
                 grid-column: 2 / 3;
                 grid-row: 5 / 6;
-                background-color: rgb(238, 238, 238);
+                background-color: rgb(251, 251, 251);
                 display: flex;
                 flex-direction: column;
                 padding: 0;
                 margin: 0;
-                border-right: 1px solid black;
+                border-right: 1px solid rgb(112, 112, 112);
             }
             .tab-content {
                 display: flex;
@@ -191,7 +191,7 @@
                 flex: 15px 20px auto; 
                 height: 70px;
                 overflow: hidden;
-                border-bottom: 1px solid black;
+                border-bottom: 1px solid rgba(192, 192, 192, 0.601);
                 font-size: x-small;
                 width: 100%;
                 padding-top: 8px;
@@ -209,7 +209,10 @@
             }
             .cont-title {
                 height: 74%;
-                font-size: medium;
+                font-size: 14px;
+            }
+            .sel-cont {
+                background-color: rgba(251, 155, 91, 0.098);
             }
             .votes {
                 display: flex;
@@ -237,27 +240,39 @@
                 grid-column: 3 / 6;
                 grid-row: 4 / 5;
                 z-index: 10;
-                background-color: rgb(224, 223, 224);
-                border-right: 1px;
             }
             .prev-header {
                 padding: 10px;
+                padding-top: 30px;
                 border-bottom: 1px solid black;
                 display: flex;
                 flex-direction: column;
-                height: 150px;
+                height:fit-content;
+                background-color:  rgb(237, 237, 237);
             }
             .prev-head-deets {
                 display: flex;
+                align-items: end;
                 justify-content: space-between;
-                align-items: flex-start;
             }  
-            
-
+            .prev-stats {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+            .prev-votes {
+                font-size: 11px;
+                padding: 10px;
+            }
+            .input-comment {
+                display: flex;
+                align-items: end;
+                padding-right: 40px;
+            }
             .comment-section {
                 width: 600px;
                 margin: auto;
-                background: white;
+                background-color: #F5F5F5;
                 padding: 15px;
                 box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
                 box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.4);
@@ -265,7 +280,7 @@
 
             .comment {
                 padding: 10px;
-                border-bottom: 1px solid #ddd;
+                padding-bottom: 0px;
             }
 
             .reply {
@@ -303,7 +318,7 @@
             <button class="btn-comment">💬 4,887 Comment</button>
         </nav>        
         <div class="tab-names">
-            <div class="tab-name sel-tab"><a href="/whats-hot">Whats Hot</a></div>
+            <div class="tab-name sel-tab"><a href="/whats-hot" style="color: #FF4A40;">Whats Hot</a></div>
             <div class="tab-name"><a href="/new">New</a></div>
             <div class="tab-name"><a href="/controversial">Controversial</a></div>
             <div class="tab-name"><a href="/top">Top</a></div>
@@ -359,7 +374,7 @@
                     </div>  
                 </div>         
             </div>
-            <div id="post1" class="tab-content">
+            <div id="post1" class="tab-content sel-cont">
                 <span class="item-no"> 1 </span>
                 <div class="votes"> 
                     ^
@@ -568,53 +583,116 @@
         </div>
         <div class="preview">
             <div class="prev-header">
-                <h3> I am the guy who created this design AMA</h3>
-                <h4>http:/sasd/asd/sd/ad</h4>
+                <div style="font-size: 20px; font-weight: bolder;"> <a href="">I am the guy who created this design AMA</a> <span style="font-size: 14px; font-weight: 100; color: gray;">(i.imgur.com)</span></div>
+                <div style="color: rgb(157, 157, 157); font-size: small;">http://img3.imageshack.us/img3/9807/goodlookingnew23.jpg
+                </div>
                 <div class="prev-head-deets">
                     <div class="prev-stats">
-                        stats
+                        <div>232 points (71% like it)</div> 
+                        <div class="prev-votes">
+                            <div style="color: rgb(200, 73, 4);">390 upvotes</div>
+                            <div style="color: blue;">158 down votes</div>
+                        </div>
                     </div>
-                    <div class="prev-info">
-                        info
+                    <div style="font-size: 12px;">
+                        <div style="color: gray;">Submitted on 01 Feb 2011</div>
+                        <div style="font-weight: bolder;">200 comments sort by</div>
                     </div>
                 </div>
             </div>
             <div class="comment-section">
-                <div class="comment">
-                    <div class="user">UserNumber42</div>
-                    <div class="points">47 points • 21 hours ago</div>
-                    <p>Wow, the first Reddit redesign I’ve seen that doesn’t suck...</p>
+                <div class="input-comment">
+                    <input type="text" class="input" style="height: 36px; width: 90%; margin-right: 10px;">
+                    <button style="height: 25px; width: 50px; border: 1px solid #ccc;
+                    border-radius: 3px;
+                    cursor: pointer;
+                    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.2);">save</button>
+                </div>
+                <div style="font-size:12px; width:83.5%; display: flex; justify-content: flex-end;"> <a href="" style="color: blue;">Formatting help</a></div>
+                <div style="display: flex;">
+                    <div style="display: flex; flex-direction: column; padding-top: 10px;">
+                        <button>&#9650;</button>  <!-- Up arrow -->
+                        <button>&#9660;</button>
+                    </div>
+                    <div class="comment">
+                        <span class="user">UserNumber42</span>
+                        <span class="points">47 points • 21 hours ago</span>
+                        <div>Wow, the first Reddit redesign I’ve seen that doesn’t suck...</div>
+                    </div>
+                    
+                </div>
+                <div style="font-size: small; margin-left: 25px;">
+                    <span><a href=""  style="color: gray">permalink</a></span>
+                    <span><a href=""  style="color: gray">report</a></span>
+                    <span><a href=""  style="color: gray"> reply</a></span>
                 </div>
             
                 <div class="comment reply">
-                    <div class="user">7hundredand77</div>
-                    <div class="points">14 points • 20 hours ago</div>
-                    <p>Ha, yeah, since I know many people use widescreen monitors...</p>
+                    <div style="display: flex;">
+                        <div style="display: flex; flex-direction: column; padding-top: 10px;">
+                            <button>&#9650;</button>  <!-- Up arrow -->
+                            <button>&#9660;</button>
+                        </div>
+                        <div style="padding: 10px; padding-bottom: 0px;">
+                            <span class="user">7hundredand77 <span style="font-size: 10px;"></span></span>
+                            <span class="points">14 points • 20 hours ago</span>
+                            <div>Ha, yeah, since I know many people use widescreen monitors...</div>
+                        </div>
+                    </div>
+                    <div style="font-size: small; margin-left: 25px;">
+                        <span><a href=""  style="color: gray">permalink</a></span>
+                        <span><a href=""  style="color: gray">report</a></span>
+                        <span><a href=""  style="color: gray"> reply</a></span>
+                    </div>
+                    
+                    
+
+                    <div class="comment reply">
+                        <div style="display: flex;">
+                            <div style="display: flex; flex-direction: column; padding-top: 10px;">
+                                <button>&#9650;</button>  <!-- Up arrow -->
+                                <button>&#9660;</button>
+                            </div>
+                            <div style="padding: 10px; padding-bottom: 0px;">
+                                <span class="user">7hundredand77</span>
+                                <span class="points">14 points • 20 hours ago</span>
+                                <div>Ha, yeah, since I know many people use widescreen monitors...</div>
+                            </div>
+                        </div>
+                        <div style="font-size: small; margin-left: 25px;">
+                            <span><a href=""  style="color: gray">permalink</a></span>
+                            <span><a href=""  style="color: gray">report</a></span>
+                            <span><a href=""  style="color: gray"> reply</a></span>
+                        </div>
+                    </div>
+                    <div class="comment reply">
+                        <div style="display: flex;">
+                            <div style="display: flex; flex-direction: column; padding-top: 10px;">
+                                <button>&#9650;</button>  <!-- Up arrow -->
+                                <button>&#9660;</button>
+                            </div>
+                            <div style="padding: 10px; padding-bottom: 0px;">
+                                <span class="user">7hundredand77</span>
+                                <span class="points">5 points • 14 hours ago</span>
+                                <div>
+                                    <p>I am going to update the design tonight. Here’s what needs to be done:</p>
+                                    <ul>
+                                        <li>Orange icon for new messages</li>
+                                        <li>More Reddit-styled color theme</li>
+                                        <li>Update column widths</li>
+                                        <li>Allow dynamic-sized story lengths</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="font-size: small; margin-left: 25px;">
+                            <span><a href=""  style="color: gray">permalink</a></span>
+                            <span><a href=""  style="color: gray">report</a></span>
+                            <span><a href=""  style="color: gray"> reply</a></span>
+                        </div>
+                    </div>
                 </div>
-            
-                <div class="comment reply">
-                    <div class="user">aliasfoxspam</div>
-                    <div class="points">7 points • 15 hours ago</div>
-                    <p>This looks like an email client. Brilliant!</p>
-                </div>
-            
-                <div class="comment reply">
-                    <div class="user">Deterministic</div>
-                    <div class="points">4 points • 11 hours ago</div>
-                    <p>It’s funny that you mention email, because it looks vaguely like Google Wave...</p>
-                </div>
-            
-                <div class="comment">
-                    <div class="user">7hundredand77</div>
-                    <div class="points">5 points • 14 hours ago</div>
-                    <p>I am going to update the design tonight. Here’s what needs to be done:</p>
-                    <ul>
-                        <li>Orange icon for new messages</li>
-                        <li>More Reddit-styled color theme</li>
-                        <li>Update column widths</li>
-                        <li>Allow dynamic-sized story lengths</li>
-                    </ul>
-                </div>
+                
             </div>
         </div>
         
